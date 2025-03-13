@@ -1,5 +1,10 @@
 # URL Shortener Frontend
 
+## Application Demo
+
+[Screen Recording 2025-03-13 at 15.38.08.mov](../../../Desktop/Screen%20Recording%202025-03-13%20at%2015.38.08.mov)
+
+
 Frontend URL
 
 Frontend: https://url-shortener-frontend-wine.vercel.app/
