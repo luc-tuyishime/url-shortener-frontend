@@ -25,7 +25,7 @@ const RegisterPage: React.FC = () => {
 
     const [register, { isLoading }] = useRegisterMutation();
 
-    const [formData, setFormData] = useState({
+    const [formData, setFormData] = useState<any>({
         username: '',
         email: '',
         password: '',
@@ -83,7 +83,7 @@ const RegisterPage: React.FC = () => {
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const { name, value } = e.target;
-        setFormData(prev => ({
+        setFormData((prev: any) => ({
             ...prev,
             [name]: value
         }));
@@ -105,18 +105,16 @@ const RegisterPage: React.FC = () => {
         }
 
         try {
-            const { ...registrationData } = formData;
+            // eslint-disable-next-line @typescript-eslint/no-unused-vars
+            const { confirmPassword, ...registrationData } = formData;
             await register(registrationData).unwrap();
 
-            // Show success message
             setRegistrationSuccess(true);
 
-            // Reset form
             setFormData({
                 username: '',
                 email: '',
-                password: '',
-                confirmPassword: '',
+                password: ''
             });
 
             // Redirect to login after 2 seconds
@@ -135,7 +133,7 @@ const RegisterPage: React.FC = () => {
         const hasUppercase = /[A-Z]/.test(formData.password);
         const hasLowercase = /[a-z]/.test(formData.password);
         const hasNumber = /[0-9]/.test(formData.password);
-        const hasSpecialChar = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/.test(formData.password);
+        const hasSpecialChar = /[!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?]+/.test(formData.password);
 
         return { hasMinLength, hasUppercase, hasLowercase, hasNumber, hasSpecialChar };
     };
