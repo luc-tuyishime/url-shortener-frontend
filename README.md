@@ -1,5 +1,10 @@
 # URL Shortener Frontend
 
+Frontend URL
+
+Frontend: https://url-shortener-frontend-wine.vercel.app/
+Swagger URL: https://url-shortener-backend-production-bb28.up.railway.app/api/docs#/
+
 This is the frontend for the URL Shortener application built with React with Animations, TypeScript, Tailwind CSS, and Redux Toolkit.
 
 ## Features
