@@ -2,7 +2,7 @@
 
 ## Application Demo
 
-[Screen Recording 2025-03-13 at 15.38.08.mov](../../../Desktop/Screen%20Recording%202025-03-13%20at%2015.38.08.mov)
+https://drive.google.com/file/d/17NdJiwKtCFKXfiyWr2N0CTlGSO6MCEoH/view?usp=sharing
 
 
 Frontend URL
