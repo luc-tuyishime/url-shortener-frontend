@@ -112,7 +112,6 @@ const authSlice = createSlice({
             .addMatcher(
                 authApi.endpoints.register.matchRejected,
                 (state, action) => {
-                    console.log('actions ==>', action)
                     state.status = 'failed';
                     // @ts-ignore
                     state.error = action.payload?.data?.message || action.error.message || 'Registration failed';
@@ -138,7 +137,6 @@ const authSlice = createSlice({
                     localStorage.removeItem('refreshToken');
                 }
             )
-            // Refresh token
             .addMatcher(
                 authApi.endpoints.refresh.matchFulfilled,
                 (state, action) => {
